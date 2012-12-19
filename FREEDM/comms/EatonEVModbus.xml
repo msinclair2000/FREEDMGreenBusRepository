@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Master xmlns="org.totalgrid.reef.protocol.modbus">
+  <Stack Address="1" />
+  <Polls>
+    <!--<Poll TimeoutMs="2000" IntervalMs="1000" Count="0" Start="0" Type="DiscreteInput" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <!--<Poll TimeoutMs="2000" IntervalMs="1000" Count="0" Start="0" Type="CoilStatus" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <!--<Poll TimeoutMs="2000" IntervalMs="5000" Count="0" Start="0" Type="InputRegister" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="18" Start="512" Type="HoldingRegister" />
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="2" Start="773" Type="HoldingRegister" />
+  </Polls>
+  <DiscreteInputMap>
+  </DiscreteInputMap>
+  <CoilStatusMap>
+  </CoilStatusMap>
+  <InputRegisterMap>
+  </InputRegisterMap>
+  <HoldingRegisterMap>
+    <ToNumber ReefName="Residential.EVCS_Eaton.Vp" Type="Float32LE" Index="512" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.ALCRatio" Type="Float32LE" Index="514" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.MaxPilotDC" Type="Float32LE" Index="516" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.Igf" Type="Float32LE" Index="518" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.Ic" Type="Float32LE" Index="520" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.Iv" Type="Float32LE" Index="522" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.Rprox" Type="Float32LE" Index="524" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.LightSense" Type="Float32LE" Index="526" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.Temp" Type="Float32LE" Index="528" Unit="raw" />
+    <ToNumber ReefName="Residential.EVCS_Eaton.EVSE_State" Type="UInt32BE" Index="773" Unit="raw" />
+  </HoldingRegisterMap>
+</Master>

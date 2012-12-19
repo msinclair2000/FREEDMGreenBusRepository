@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Master xmlns="org.totalgrid.reef.protocol.modbus">
+  <Stack Address="2" />
+  <Polls>
+    <!--<Poll TimeoutMs="2000" IntervalMs="1000" Count="0" Start="0" Type="DiscreteInput" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <!--<Poll TimeoutMs="2000" IntervalMs="1000" Count="0" Start="0" Type="CoilStatus" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <!--<Poll TimeoutMs="2000" IntervalMs="5000" Count="0" Start="0" Type="InputRegister" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="3" Start="1099" Type="HoldingRegister" />
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="3" Start="1123" Type="HoldingRegister" />
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="8" Start="1139" Type="HoldingRegister" />
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="1" Start="1179" Type="HoldingRegister" />
+    <!--Poll TimeoutMs="3000" IntervalMs="5000" Count="1" Start="1700" Type="HoldingRegister" />-->
+
+  </Polls>
+  <DiscreteInputMap>
+  </DiscreteInputMap>
+  <CoilStatusMap>
+  </CoilStatusMap>
+  <InputRegisterMap>
+  </InputRegisterMap>
+  <HoldingRegisterMap>
+    <ToNumber ReefName="LV.Line.V_a" Type="UInt16" Index="1123" Unit="Volts" />
+    <ToNumber ReefName="LV.Line.V_b" Type="UInt16" Index="1124" Unit="Volts" />
+    <ToNumber ReefName="LV.Line.V_c" Type="UInt16" Index="1125" Unit="Volts" />
+    <ToNumber ReefName="LV.Line.I_a" Type="UInt16" Index="1099" Unit="Amps" />
+    <ToNumber ReefName="LV.Line.I_b" Type="UInt16" Index="1100" Unit="Amps" />
+    <ToNumber ReefName="LV.Line.I_c" Type="UInt16" Index="1101" Unit="Amps" />
+    <ToNumber ReefName="LV.Line.kW_a" Type="SInt16" Index="1139" Unit="kW" />
+    <ToNumber ReefName="LV.Line.kW_b" Type="SInt16" Index="1140" Unit="kW" />
+    <ToNumber ReefName="LV.Line.kW_c" Type="SInt16" Index="1141" Unit="kW" />
+    <ToNumber ReefName="LV.Line.kW_tot" Type="SInt16" Index="1142" Unit="kW" />
+    <ToNumber ReefName="LV.Line.kVar_a" Type="SInt16" Index="1143" Unit="kVar" />
+    <ToNumber ReefName="LV.Line.kVar_b" Type="SInt16" Index="1144" Unit="kVar" />
+    <ToNumber ReefName="LV.Line.kVar_c" Type="SInt16" Index="1145" Unit="kVar" />
+    <ToNumber ReefName="LV.Line.kVar_tot" Type="SInt16" Index="1146" Unit="kVar" />
+    <ToNumber ReefName="LV.Line.Frequency" Type="UInt16" Index="1179" Unit="raw" />
+    <!--ToNumber ReefName="LV.Line.kWh" Type="UInt32BE" Index="1700" Unit="raw" />-->
+
+  </HoldingRegisterMap>
+</Master>

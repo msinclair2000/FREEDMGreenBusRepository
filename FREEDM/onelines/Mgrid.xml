@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schematic xmlns="http://www.totalgrid.org/schematic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schematic.xsd">
+  <voltages>
+    <nominalVoltage value="22kV" color="#ef2929" />
+    <nominalVoltage value="7.2kV" color="#fce94f" />
+    <nominalVoltage value="277V" color="#fce94f" isDefault="true" />
+    <nominalVoltage value="240V" color="#729fcf" />
+    <nominalVoltage value="208V" color="deeppink" />
+    <nominalVoltage value="120V" color="purple" />
+    <nominalVoltage value="grid" color="#37cc02" />
+  </voltages>
+  <equipment>
+    <equipment xsi:type="NullEquipment" name="RSpace">
+      <coordinate x="1450" y="500" />
+    </equipment>
+   
+    <equipment xsi:type="BusBar" name="topBus" label="" nominalVoltage="208V" length="170" rotate="90">
+      <coordinate x="695" y="95" />
+    </equipment>
+    
+    <equipment xsi:type="BusBar" name="rightBus" label="" nominalVoltage="208V" length="400">
+      <coordinate x="863" y="95" />
+    </equipment>
+   
+    <equipment xsi:type="BusBar" name="leftBus" label="" nominalVoltage="208V" length="400">
+      <coordinate x="695" y="95" />
+    </equipment>
+   
+    <equipment xsi:type='Extension' name='eaton2Round' label='Eaton EVCS' symbolFileName="eaton2Round">
+    <coordinate x='465' y='250' />
+    </equipment>
+
+    <equipment xsi:type='Extension' name='blackvolt' label='' symbolFileName="blackvolt">
+    <coordinate x='270' y='400' />
+    </equipment>
+
+
+    <equipment xsi:type="DestinationArrow" name="Grid" label="" rotate="90">
+      <coordinate x="780" y="85" />
+    </equipment>
+   
+    <equipment xsi:type='Extension' name='gridpoint' label='' symbolFileName="gridpoint">
+    <coordinate x='780' y='30' />
+    </equipment>
+   
+    <equipment xsi:type='Extension' name='RooftopPVRound' label='FREEDM 40kW Rooftop PV' symbolFileName="RooftopPVRound">
+    <coordinate x='1090' y='130' />
+    </equipment>
+
+    <equipment xsi:type='Extension' name='battUnitRound' label='Greensmith DESS' symbolFileName="battUnitRound">
+    <coordinate x='1103' y='360' />
+    </equipment>
+
+    
+
+</equipment>
+  
+<connections>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="rightBus" orientation="EAST" />
+      <endTerminal equipmentName="RooftopPVRound" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="rightBus" orientation="EAST" />
+      <endTerminal equipmentName="battUnitRound" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="leftBus" orientation="WEST" />
+      <endTerminal equipmentName="eaton2Round" orientation="EAST"/>
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="gridpoint" orientation="SOUTH" />
+      <endTerminal equipmentName="Grid" orientation="NORTH"/>
+    </connection>
+
+
+  </connections>
+  <pointGroups>
+    <pointGroup name="EVCharger">
+      <coordinate x="250" y="190" />
+      <point name="Residential.EVCS_Eaton.Ic" pointName="Residential.EVCS_Eaton.Ic" />
+      <point name="Residential.EVCS_Eaton.Vp" pointName="Residential.EVCS_Eaton.Vp" />
+    </pointGroup>
+    <pointGroup name="Greensmith">
+      <coordinate x="1218" y="330" />
+      <point name="FREEDM_Microgrid.ESS_R.Vdc_out" pointName="FREEDM_Microgrid.ESS_R.Vdc_out" />
+      <point name="FREEDM_Microgrid.ESS_R.I_out" pointName="FREEDM_Microgrid.ESS_R.I_out" />
+      <point name="FREEDM_Microgrid.ESS_R.Inverter_Watts" pointName="FREEDM_Microgrid.ESS_R.Inverter_Watts" />
+      <point name="FREEDM_Microgrid.ESS_R.Charger_Watts" pointName="FREEDM_Microgrid.ESS_R.Charger_Watts" />
+      <point name="FREEDM_Microgrid.ESS_R.%SOC" pointName="FREEDM_Microgrid.ESS_R.%SOC" />
+    </pointGroup>
+    <pointGroup name="PV">
+      <coordinate x="1218" y="110" />
+      <point name="LV.Line_PV.kW_tot" pointName="LV.Line_PV.kW_tot" />
+      <point name="LV.Line_PV.kVar_tot" pointName="LV.Line_PV.kVar_tot" />
+      <point name="LV.Line_PV.kWh" pointName="LV.Line_PV.kWh" />
+    </pointGroup>
+    <pointGroup name="EVCS_health">
+      <coordinate x="250" y="280" />
+      <point name="Residential.EVCS_Eaton.EVSE_State" pointName="Residential.EVCS_Eaton.EVSE_State" />
+     </pointGroup>
+  </pointGroups>
+  <navigationDestinations>
+    <destination name="schematic-MV" uri="ModelNodeDetailPlace:?model_node_name=MV;tab=schematic" />
+  </navigationDestinations>
+  <navigationAreas></navigationAreas>
+  <labels>
+    <label xsi:type="Label" name="Title" label="FREEDM Microgrid" font-size="42">
+      <coordinate x="200" y="30" />
+    </label>
+    <label xsi:type="Label" name="Title" label="Charger Status" font-size="16">
+      <coordinate x="240" y="260" />
+    </label>
+    <label xsi:type="Label" name="Title" label="FREEDM LAB" font-size="24">
+      <coordinate x="700" y="330" />
+    </label>
+
+
+  </labels>
+  <rects>
+   <!--rect height="20" width="4" >
+   		<coordinate x="450" y="350"/>
+  </rect-->
+
+
+   </rects>
+</schematic>

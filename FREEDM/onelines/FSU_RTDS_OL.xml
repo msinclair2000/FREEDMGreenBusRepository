@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<oneline xmlns="http://www.totalgrid.org/oneline" xsi:noNamespaceSchemaLocation="oneline.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- RTDS_FSU oneline -->
+  <voltages>
+    <nominalVoltage value="22kV" color="#ef2929" />
+    <nominalVoltage value="7.2kV" color="#fce94f" isDefault="true" />
+    <nominalVoltage value="277V" color="aqua" />
+    <nominalVoltage value="240V" color="#729fcf" />
+    <nominalVoltage value="208V" color="deeppink" />
+    <nominalVoltage value="120V" color="purple" />
+  </voltages>
+  <devices>
+    <device xsi:type="GridTiePoint" name="RTDS_FSU.Grid" label="nolabel" nominalVoltage="22kV">
+      <coordinate x="140" y="100" />
+    </device>
+    <device xsi:type="Transformer" name="RTDS_FSU.Substation1" label="SST" type="SOLID_STATE" rating="" westNominalVoltage="22kV" eastNominalVoltage="7.2kV">
+      <coordinate x="300" y="100" />
+    </device>
+    <device xsi:type="BusBar" name="RTDS_FSU.NONAME" label="" nominalVoltage="7.2kV" height="107">
+      <coordinate x="430" y="95" />
+    </device>
+    <device xsi:type="CircuitBreaker" name="RTDS_FSU.FID1" pointName="RTDS_FSU.FID1.Status" label="FID1" initialState="CLOSED" commandable="true">
+      <coordinate x="476" y="70" />
+    </device>
+    <device xsi:type="CircuitBreaker" name="RTDS_FSU.FID2" pointName="RTDS_FSU.FID2.Status" label="FID2" initialState="CLOSED" commandable="true">
+      <coordinate x="476" y="127" />
+    </device>
+    <device xsi:type="BusBar" name="RTDS_FSU.Bus3" label="" nominalVoltage="7.2kV" length="150">
+      <coordinate x="466.5" y="277" />
+    </device>
+    <device xsi:type="LineConnector" name="RTDS_FSU.LC_DES3" label="something" nominalVoltage="240V">
+      <coordinate x="182.09999811649323" y="277" />
+    </device>
+    <device xsi:type="Storage" name="RTDS_FSU.DES3" label="DES3">
+      <coordinate x="182.09999811649323" y="352" />
+    </device>
+    <device xsi:type="LineConnector" name="RTDS_FSU.LC3" label="something" nominalVoltage="240V">
+      <coordinate x="103.09999811649323" y="277" />
+    </device>
+    <device xsi:type="Load" name="RTDS_FSU.Load3" layoutDirection="VERTICAL">
+      <coordinate x="103.09999811649323" y="327" />
+    </device>
+    <device xsi:type="Ground" name="RTDS_FSU.GroundPv3">
+      <coordinate x="103.09999811649323" y="377" />
+    </device>
+    <device xsi:type="Generator" name="RTDS_FSU.PV3" type="PHOTOVOLTAIC" label="PV3" rating="">
+      <coordinate x="43.849998116493225" y="277" />
+    </device>
+    <device xsi:type="Transformer" name="RTDS_FSU.SST3" label="SST3" type="SOLID_STATE" rating="" westNominalVoltage="277V" eastNominalVoltage="7.2kV">
+      <coordinate x="332.19999623298645" y="277" />
+    </device>
+    <device xsi:type="Load" name="RTDS_FSU.LoadBus3" layoutDirection="HORIZONTAL">
+      <coordinate x="427" y="327" />
+    </device>
+    <device xsi:type="Ground" name="RTDS_FSU.GroundBus3">
+      <coordinate x="397.375" y="367" />
+    </device>
+    <device xsi:type="CircuitBreaker" name="RTDS_FSU.FID4" pointName="RTDS_FSU.FID4.Status" label="FID4" initialState="CLOSED" commandable="true">
+      <coordinate x="660" y="303" />
+    </device>
+    <device xsi:type="CircuitBreaker" name="RTDS_FSU.FID3" pointName="RTDS_FSU.FID3.Status" label="FID3" initialState="CLOSED" commandable="true">
+      <coordinate x="716" y="127" />
+    </device>
+    <device xsi:type="BusBar" name="RTDS_FSU.Bus1" label="" nominalVoltage="7.2kV" height="150">
+      <coordinate x="776" y="100" />
+    </device>
+    <device xsi:type="LineConnector" name="RTDS_FSU.LC_DES1" label="something" nominalVoltage="240V">
+      <coordinate x="1012.0000038146973" y="100" />
+    </device>
+    <device xsi:type="Storage" name="RTDS_FSU.DES1" label="DES1">
+      <coordinate x="1012.0000038146973" y="175" />
+    </device>
+    <device xsi:type="LineConnector" name="RTDS_FSU.LC1" label="something" nominalVoltage="240V">
+      <coordinate x="1164.0000019073486" y="100" />
+    </device>
+    <device xsi:type="Load" name="RTDS_FSU.Load1" layoutDirection="VERTICAL">
+      <coordinate x="1164.0000019073486" y="150" />
+    </device>
+    <device xsi:type="Ground" name="RTDS_FSU.GroundPv1">
+      <coordinate x="1164.0000019073486" y="200" />
+    </device>
+    <device xsi:type="Generator" name="RTDS_FSU.PV1" type="PHOTOVOLTAIC" label="PV1" rating="">
+      <coordinate x="1224.0000019073486" y="100" />
+    </device>
+    <device xsi:type="Transformer" name="RTDS_FSU.SST1" label="SST1" type="SOLID_STATE" rating="" westNominalVoltage="277V" eastNominalVoltage="7.2kV">
+      <coordinate x="912.0000038146973" y="100" />
+    </device>
+    <device xsi:type="Load" name="RTDS_FSU.LoadBus1" layoutDirection="HORIZONTAL">
+      <coordinate x="816" y="150" />
+    </device>
+    <device xsi:type="Ground" name="RTDS_FSU.GroundBus1">
+      <coordinate x="846" y="190" />
+    </device>
+    <device xsi:type="BusBar" name="RTDS_FSU.Bus2" label="" nominalVoltage="7.2kV" height="150">
+      <coordinate x="746" y="277" />
+    </device>
+    <device xsi:type="LineConnector" name="RTDS_FSU.LC_DES2" label="something" nominalVoltage="240V">
+      <coordinate x="982.0000038146973" y="277" />
+    </device>
+    <device xsi:type="Storage" name="RTDS_FSU.DES2" label="DES2">
+      <coordinate x="982.0000038146973" y="352" />
+    </device>
+    <device xsi:type="LineConnector" name="RTDS_FSU.LC2" label="something" nominalVoltage="240V">
+      <coordinate x="1134.0000019073486" y="277" />
+    </device>
+    <device xsi:type="Load" name="RTDS_FSU.Load2" layoutDirection="VERTICAL">
+      <coordinate x="1134.0000019073486" y="327" />
+    </device>
+    <device xsi:type="Ground" name="RTDS_FSU.GroundPv2">
+      <coordinate x="1134.0000019073486" y="377" />
+    </device>
+    <device xsi:type="Generator" name="RTDS_FSU.PV2" type="PHOTOVOLTAIC" label="PV2" rating="">
+      <coordinate x="1194.0000019073486" y="277" />
+    </device>
+    <device xsi:type="Transformer" name="RTDS_FSU.SST2" label="SST2" type="SOLID_STATE" rating="" westNominalVoltage="277V" eastNominalVoltage="7.2kV">
+      <coordinate x="882.0000038146973" y="277" />
+    </device>
+    <device xsi:type="Load" name="RTDS_FSU.LoadBus2" layoutDirection="HORIZONTAL">
+      <coordinate x="786" y="327" />
+    </device>
+    <device xsi:type="Ground" name="RTDS_FSU.GroundBus2">
+      <coordinate x="816" y="367" />
+    </device>
+  </devices>
+  <connections>
+    <connection nominalVoltage="22kV">
+      <startTerminal equipmentName="RTDS_FSU.Grid" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.Substation1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Substation1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.NONAME" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.NONAME" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.FID1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.NONAME" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.FID2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Bus3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS_FSU.SST3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.SST3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS_FSU.LC_DES3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC_DES3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS_FSU.LC3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS_FSU.PV3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC_DES3" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.DES3" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC3" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.Load3" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.Load3" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.GroundPv3" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Bus3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS_FSU.LoadBus3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.LoadBus3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS_FSU.GroundBus3" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Bus3" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.FID2" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Bus3" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.FID4" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Bus1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.SST1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.SST1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.LC_DES1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC_DES1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.LC1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.PV1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC_DES1" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.DES1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC1" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.Load1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.Load1" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.GroundPv1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Bus1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.LoadBus1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.LoadBus1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.GroundBus1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.FID1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.Bus1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.FID3" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.Bus1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Bus2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.SST2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.SST2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.LC_DES2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC_DES2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.LC2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.PV2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC_DES2" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.DES2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.LC2" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.Load2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS_FSU.Load2" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS_FSU.GroundPv2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.Bus2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.LoadBus2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.LoadBus2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.GroundBus2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.FID3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS_FSU.Bus2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS_FSU.FID4" orientation="EAST" />
+      <endTerminal equipmentName="RTDS_FSU.Bus2" orientation="WEST" />
+    </connection>
+  </connections>
+  <pointGroups>
+    <pointGroup name="RTDS_FSU.Substation1">
+      <coordinate x="338" y="22" />
+      <point name="RTDS_FSU.Substation1.kV_a" pointName="RTDS_FSU.Substation1.kV_a" />
+      <point name="RTDS_FSU.Substation1.kW_a" pointName="RTDS_FSU.Substation1.kW_a" />
+      <point name="RTDS_FSU.Substation1.kVar_a" pointName="RTDS_FSU.Substation1.kVar_a" />
+      <point name="RTDS_FSU.Substation1.Frequency" pointName="RTDS_FSU.Substation1.Frequency" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.Bus3">
+      <coordinate x="399.5" y="259" />
+      <point name="RTDS_FSU.Bus3.kV_a" pointName="RTDS_FSU.Bus3.kV_a" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.Bus2">
+      <coordinate x="765" y="250" />
+      <point name="RTDS_FSU.Bus2.kV_a" pointName="RTDS_FSU.Bus2.kV_a" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.SST3">
+      <coordinate x="311.12" y="322" />
+      <point name="RTDS_FSU.SST3.kW_a" pointName="RTDS_FSU.SST3.kW_a" />
+      <point name="RTDS_FSU.SST3.kVar_a" pointName="RTDS_FSU.SST3.kVar_a" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.DES3">
+      <coordinate x="220" y="340" />
+      <point name="RTDS_FSU.DES3.kW" pointName="RTDS_FSU.DES3.kW" />
+      <point name="RTDS_FSU.DES3.kVar" pointName="RTDS_FSU.DES3.kVar" />
+      <point name="RTDS_FSU.DES3.%SOC" pointName="RTDS_FSU.DES3.%SOC" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.PV3">
+      <coordinate x="224.85" y="259" />
+      <point name="RTDS_FSU.PV3.kV" pointName="RTDS_FSU.PV3.kV" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.PV3">
+      <coordinate x="106.35" y="239" />
+      <point name="RTDS_FSU.PV3.kW" pointName="RTDS_FSU.PV3.kW" />
+      <point name="RTDS_FSU.PV3.kVar" pointName="RTDS_FSU.PV3.kVar" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.Bus1">
+      <coordinate x="793" y="82" />
+      <point name="RTDS_FSU.Bus1.kV_a" pointName="RTDS_FSU.Bus1.kV_a" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.SST1">
+      <coordinate x="891" y="145" />
+      <point name="RTDS_FSU.SST1.kW_a" pointName="RTDS_FSU.SST1.kW_a" />
+      <point name="RTDS_FSU.SST1.kVar_a" pointName="RTDS_FSU.SST1.kVar_a" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.DES1">
+      <coordinate x="1051" y="163" />
+      <point name="RTDS_FSU.DES1.kW" pointName="RTDS_FSU.DES1.kW" />
+      <point name="RTDS_FSU.DES1.kVar" pointName="RTDS_FSU.DES1.kVar" />
+      <point name="RTDS_FSU.DES1.%SOC" pointName="RTDS_FSU.DES1.%SOC" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.PV1">
+      <coordinate x="1001" y="82" />
+      <point name="RTDS_FSU.PV1.kV" pointName="RTDS_FSU.PV1.kV" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.PV1">
+      <coordinate x="1121" y="62" />
+      <point name="RTDS_FSU.PV1.kW" pointName="RTDS_FSU.PV1.kW" />
+      <point name="RTRTDS_FSU.PV1.kVarDS" pointName="RTDS_FSU.PV1.kVar" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.SST2">
+      <coordinate x="861" y="322" />
+      <point name="RTDS_FSU.SST2.kW_a" pointName="RTDS_FSU.SST2.kW_a" />
+      <point name="RTDS_FSU.SST2.kVar_a" pointName="RTDS_FSU.SST2.kVar_a" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.DES2">
+      <coordinate x="1021" y="340" />
+      <point name="RTDS_FSU.DES2.kW" pointName="RTDS_FSU.DES2.kW" />
+      <point name="RTDS_FSU.DES2.kVar" pointName="RTDS_FSU.DES2.kVar" />
+      <point name="RTDS_FSU.DES2.%SOC" pointName="RTDS_FSU.DES2.%SOC" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.PV2">
+      <coordinate x="971" y="259" />
+      <point name="RTDS_FSU.PV2.kV" pointName="RTDS_FSU.PV2.kV" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.PV2">
+      <coordinate x="1091" y="239" />
+      <point name="RTDS_FSU.PV2.kW" pointName="RTDS_FSU.PV2.kW" />
+      <point name="RTDS_FSU.PV2.kW" pointName="RTDS_FSU.PV2.kW" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.Line1">
+      <coordinate x="591" y="85" />
+      <point name="RTDS_FSU.Line1.Amps" pointName="RTDS_FSU.Line1.Amps" />
+      <point name="RTDS_FSU.Line1.kW" pointName="RTDS_FSU.Line1.kW" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.Line2">
+      <coordinate x="601" y="177" />
+      <point name="RTDS_FSU.Line2.Amps" pointName="RTDS_FSU.Line2.Amps" />
+      <point name="RTDS_FSU.Line2.kW" pointName="RTDS_FSU.Line2.kW" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.Line4">
+      <coordinate x="545" y="268" />
+      <point name="RTDS_FSU.Line4.Amps" pointName="RTDS_FSU.Line4.Amps" />
+      <point name="RTDS_FSU.Line4.kW" pointName="RTDS_FSU.Line4.kW" />
+    </pointGroup>
+    <pointGroup name="RTDS_FSU.Line3">
+      <coordinate x="526" y="131" />
+      <point name="RTDS_FSU.Line3.Amps" pointName="RTDS_FSU.Line3.Amps" />
+      <point name="RTDS_FSU.Line3.kW" pointName="RTDS_FSU.Line3.kW" />
+    </pointGroup>
+  </pointGroups>
+  <navigationDestinations>
+    <!--<destination name="oneline-mainstreet" uri="ModelNodeDetailPlace:?model_node_name=RTDS_FSU;tab=oneline" xmlns="http://www.totalgrid.org/oneline" />-->
+    <!--<destination name="oneline-residential" uri="ModelNodeDetailPlace:?model_node_name=Residential;tab=oneline" xmlns="http://www.totalgrid.org/oneline" />-->
+    <!--<destination name="dashboard" uri="DashboardPlace:" xmlns="http://www.totalgrid.org/oneline" />-->
+  </navigationDestinations>
+  <navigationAreas></navigationAreas>
+  <labels>
+    <!--<label xsi:type="NavigationLabel" name="oneline:mainStreet" label="To Main Street" destination="oneline-mainstreet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.totalgrid.org/oneline"><coordinate x="5" y="5" /></label>-->
+    <!--<label xsi:type="NavigationLabel" name="oneline:residential" label="To Residential" destination="oneline-residential" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.totalgrid.org/oneline"><coordinate x="5" y="50" /></label>-->
+    <!--<label xsi:type="NavigationLabel" name="dashboard" label="To Dashboard" destination="dashboard" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.totalgrid.org/oneline"><coordinate x="5" y="100" /></label>-->
+  </labels>
+  <rects></rects>
+</oneline>

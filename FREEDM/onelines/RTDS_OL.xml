@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schematic xmlns="http://www.totalgrid.org/schematic" xsi:noNamespaceSchemaLocation="schematic.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- RTDS schematic -->
+  <voltages>
+    <nominalVoltage value="22kV" color="#ef2929" />
+    <nominalVoltage value="7.2kV" color="#fce94f" isDefault="true" />
+    <nominalVoltage value="277V" color="aqua" />
+    <nominalVoltage value="240V" color="#729fcf" />
+    <nominalVoltage value="208V" color="deeppink" />
+    <nominalVoltage value="120V" color="purple" />
+  </voltages>
+  <equipment>
+    <equipment xsi:type="GridTiePoint" name="RTDS.Grid" label="22kV" nominalVoltage="22kV">
+      <coordinate x="140" y="100" />
+    </equipment>
+    <equipment xsi:type="SolidStateTransformer" name="RTDS.Substation1" label="SST" >
+      <coordinate x="300" y="100" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="RTDS.NONAME" label="" nominalVoltage="7.2kV" length="107">
+      <coordinate x="430" y="41.5" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="RTDS.FID1" pointName="RTDS.FID1.Status" label="FID1" initialState="CLOSED" action="command">
+      <coordinate x="476" y="70" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="RTDS.FID2" pointName="RTDS.FID2.Status" label="FID2" initialState="CLOSED" action="command">
+      <coordinate x="476" y="127" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="RTDS.Bus3" label="" nominalVoltage="7.2kV" length="150">
+      <coordinate x="466.5" y="202" />
+    </equipment>
+    <equipment xsi:type="LineConnector" name="RTDS.LC_DES3" label="" nominalVoltage="240V">
+      <coordinate x="182.09999811649323" y="277" />
+    </equipment>
+    <equipment xsi:type="Storage" name="RTDS.DES3" label="">
+      <coordinate x="182.09999811649323" y="352" />
+    </equipment>
+    <equipment xsi:type="LineConnector" name="RTDS.LC3" label="" nominalVoltage="240V">
+      <coordinate x="103.09999811649323" y="277" />
+    </equipment>
+    <equipment xsi:type="Load" name="RTDS.Load3" rotate="90">
+      <coordinate x="103.09999811649323" y="327" />
+    </equipment>
+    <equipment xsi:type="Ground" name="RTDS.GroundPv3">
+      <coordinate x="103.09999811649323" y="377" />
+    </equipment>
+    <equipment xsi:type="Generator" name="RTDS.PV3" type="PHOTOVOLTAIC" label="PV3" rating="">
+      <coordinate x="43.849998116493225" y="277" />
+    </equipment>
+    <equipment xsi:type="SolidStateTransformer" name="RTDS.SST3" label="SST3" >
+      <coordinate x="332.19999623298645" y="277" />
+    </equipment>
+    <equipment xsi:type="Load" name="RTDS.LoadBus3" rotate="0">
+      <coordinate x="427" y="327" />
+    </equipment>
+    <equipment xsi:type="Ground" name="RTDS.GroundBus3">
+      <coordinate x="397.375" y="367" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="RTDS.FID4" pointName="RTDS.FID4.Status" label="FID4" initialState="CLOSED" action="command">
+      <coordinate x="660" y="303" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="RTDS.FID3" pointName="RTDS.FID3.Status" label="FID3" initialState="CLOSED" action="command">
+      <coordinate x="716" y="127" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="RTDS.Bus1" label="" nominalVoltage="7.2kV" length="150">
+      <coordinate x="776" y="25" />
+    </equipment>
+    <equipment xsi:type="LineConnector" name="RTDS.LC_DES1" label="" nominalVoltage="240V">
+      <coordinate x="1012.0000038146973" y="100" />
+    </equipment>
+    <equipment xsi:type="Storage" name="RTDS.DES1" label="">
+      <coordinate x="1012.0000038146973" y="175" />
+    </equipment>
+    <equipment xsi:type="LineConnector" name="RTDS.LC1" label="" nominalVoltage="240V">
+      <coordinate x="1164.0000019073486" y="100" />
+    </equipment>
+    <equipment xsi:type="Load" name="RTDS.Load1" rotate="90">
+      <coordinate x="1164.0000019073486" y="150" />
+    </equipment>
+    <equipment xsi:type="Ground" name="RTDS.GroundPv1">
+      <coordinate x="1164.0000019073486" y="200" />
+    </equipment>
+    <equipment xsi:type="Generator" name="RTDS.PV1" type="PHOTOVOLTAIC" label="PV1" rating="">
+      <coordinate x="1224.0000019073486" y="100" />
+    </equipment>
+    <equipment xsi:type="SolidStateTransformer" name="RTDS.SST1" label="SST1" >
+      <coordinate x="912.0000038146973" y="100" />
+    </equipment>
+    <equipment xsi:type="Load" name="RTDS.LoadBus1" rotate="0">
+      <coordinate x="816" y="150" />
+    </equipment>
+    <equipment xsi:type="Ground" name="RTDS.GroundBus1">
+      <coordinate x="846" y="190" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="RTDS.Bus2" label="" nominalVoltage="7.2kV" length="150">
+      <coordinate x="746" y="202" />
+    </equipment>
+    <equipment xsi:type="LineConnector" name="RTDS.LC_DES2" label="" nominalVoltage="240V">
+      <coordinate x="982.0000038146973" y="277" />
+    </equipment>
+    <equipment xsi:type="Storage" name="RTDS.DES2" label="">
+      <coordinate x="982.0000038146973" y="352" />
+    </equipment>
+    <equipment xsi:type="LineConnector" name="RTDS.LC2" label="" nominalVoltage="240V">
+      <coordinate x="1134.0000019073486" y="277" />
+    </equipment>
+    <equipment xsi:type="Load" name="RTDS.Load2" rotate="90">
+      <coordinate x="1134.0000019073486" y="327" />
+    </equipment>
+    <equipment xsi:type="Ground" name="RTDS.GroundPv2">
+      <coordinate x="1134.0000019073486" y="377" />
+    </equipment>
+    <equipment xsi:type="Generator" name="RTDS.PV2" type="PHOTOVOLTAIC" label="PV2" rating="">
+      <coordinate x="1194.0000019073486" y="277" />
+    </equipment>
+    <equipment xsi:type="SolidStateTransformer" name="RTDS.SST2" label="SST2" >
+      <coordinate x="882.0000038146973" y="277" />
+    </equipment>
+    <equipment xsi:type="Load" name="RTDS.LoadBus2" rotate="0">
+      <coordinate x="786" y="327" />
+    </equipment>
+    <equipment xsi:type="Ground" name="RTDS.GroundBus2">
+      <coordinate x="816" y="367" />
+    </equipment>
+  </equipment>
+  <connections>
+    <connection nominalVoltage="22kV">
+      <startTerminal equipmentName="RTDS.Grid" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.Substation1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Substation1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.NONAME" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.NONAME" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.FID1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.NONAME" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.FID2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Bus3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS.SST3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.SST3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS.LC_DES3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC_DES3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS.LC3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS.PV3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC_DES3" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.DES3" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC3" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.Load3" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.Load3" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.GroundPv3" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Bus3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS.LoadBus3" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.LoadBus3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS.GroundBus3" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Bus3" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.FID2" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Bus3" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.FID4" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Bus1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.SST1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.SST1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.LC_DES1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC_DES1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.LC1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.PV1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC_DES1" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.DES1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC1" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.Load1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.Load1" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.GroundPv1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Bus1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.LoadBus1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.LoadBus1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.GroundBus1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.FID1" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.Bus1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.FID3" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.Bus1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Bus2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.SST2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.SST2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.LC_DES2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC_DES2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.LC2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.PV2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC_DES2" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.DES2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.LC2" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.Load2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="240V">
+      <startTerminal equipmentName="RTDS.Load2" orientation="SOUTH" />
+      <endTerminal equipmentName="RTDS.GroundPv2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.Bus2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.LoadBus2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.LoadBus2" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.GroundBus2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.FID3" orientation="WEST" />
+      <endTerminal equipmentName="RTDS.Bus2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="RTDS.FID4" orientation="EAST" />
+      <endTerminal equipmentName="RTDS.Bus2" orientation="WEST" />
+    </connection>
+  </connections>
+  <pointGroups>
+    <pointGroup name="RTDS.Substation1">
+      <coordinate x="338" y="22" />
+      <point name="RTDS.Substation1.kV_a" pointName="RTDS.Substation1.kV_a" />
+      <point name="RTDS.Substation1.kW_a" pointName="RTDS.Substation1.kW_a" />
+      <point name="RTDS.Substation1.kVar_a" pointName="RTDS.Substation1.kVar_a" />
+      <point name="RTDS.Substation1.Frequency" pointName="RTDS.Substation1.Frequency" />
+    </pointGroup>
+    <pointGroup name="RTDS.Bus3">
+      <coordinate x="360" y="259" />
+      <point name="RTDS.Bus3.kV_a" pointName="RTDS.Bus3.kV_a" />
+    </pointGroup>
+    <pointGroup name="RTDS.Bus2">
+      <coordinate x="765" y="260" />
+      <point name="RTDS.Bus2.kV_a" pointName="RTDS.Bus2.kV_a" />
+    </pointGroup>
+    <pointGroup name="RTDS.SST3">
+      <coordinate x="280" y="322" />
+      <point name="RTDS.SST3.kW_a" pointName="RTDS.SST3.kW_a" />
+      <point name="RTDS.SST3.kVar_a" pointName="RTDS.SST3.kVar_a" />
+    </pointGroup>
+    <pointGroup name="RTDS.DES3">
+      <coordinate x="190" y="335" />
+      <point name="RTDS.DES3.kW" pointName="RTDS.DES3.kW" />
+      <point name="RTDS.DES3.kVar" pointName="RTDS.DES3.kVar" />
+      <point name="RTDS.DES3.%SOC" pointName="RTDS.DES3.%SOC" />
+    </pointGroup>
+    <pointGroup name="RTDS.PV3">
+      <coordinate x="200" y="259" />
+      <point name="RTDS.PV3.kV" pointName="RTDS.PV3.kV" />
+    </pointGroup>
+    <pointGroup name="RTDS.PV3">
+      <coordinate x="70" y="239" />
+      <point name="RTDS.PV3.kW" pointName="RTDS.PV3.kW" />
+      <point name="RTDS.PV3.kVar" pointName="RTDS.PV3.kVar" />
+    </pointGroup>
+    <pointGroup name="RTDS.Bus1">
+      <coordinate x="793" y="82" />
+      <point name="RTDS.Bus1.kV_a" pointName="RTDS.Bus1.kV_a" />
+    </pointGroup>
+    <pointGroup name="RTDS.SST1">
+      <coordinate x="860" y="145" />
+      <point name="RTDS.SST1.kW_a" pointName="RTDS.SST1.kW_a" />
+      <point name="RTDS.SST1.kVar_a" pointName="RTDS.SST1.kVar_a" />
+    </pointGroup>
+    <pointGroup name="RTDS.DES1">
+      <coordinate x="1020" y="158" />
+      <point name="RTDS.DES1.kW" pointName="RTDS.DES1.kW" />
+      <point name="RTDS.DES1.kVar" pointName="RTDS.DES1.kVar" />
+      <point name="RTDS.DES1.%SOC" pointName="RTDS.DES1.%SOC" />
+    </pointGroup>
+    <pointGroup name="RTDS.PV1">
+      <coordinate x="1001" y="82" />
+      <point name="RTDS.PV1.kV" pointName="RTDS.PV1.kV" />
+    </pointGroup>
+    <pointGroup name="RTDS.PV1">
+      <coordinate x="1121" y="62" />
+      <point name="RTDS.PV1.kW" pointName="RTDS.PV1.kW" />
+      <point name="RTRTDS.PV1.kVarDS" pointName="RTDS.PV1.kVar" />
+    </pointGroup>
+    <pointGroup name="RTDS.SST2">
+      <coordinate x="830" y="322" />
+      <point name="RTDS.SST2.kW_a" pointName="RTDS.SST2.kW_a" />
+      <point name="RTDS.SST2.kVar_a" pointName="RTDS.SST2.kVar_a" />
+    </pointGroup>
+    <pointGroup name="RTDS.DES2">
+      <coordinate x="992" y="335" />
+      <point name="RTDS.DES2.kW" pointName="RTDS.DES2.kW" />
+      <point name="RTDS.DES2.kVar" pointName="RTDS.DES2.kVar" />
+      <point name="RTDS.DES2.%SOC" pointName="RTDS.DES2.%SOC" />
+    </pointGroup>
+    <pointGroup name="RTDS.PV2">
+      <coordinate x="971" y="259" />
+      <point name="RTDS.PV2.kV" pointName="RTDS.PV2.kV" />
+    </pointGroup>
+    <pointGroup name="RTDS.PV2">
+      <coordinate x="1091" y="239" />
+      <point name="RTDS.PV2.kW" pointName="RTDS.PV2.kW" />
+      <point name="RTDS.PV2.kW" pointName="RTDS.PV2.kW" />
+    </pointGroup>
+    <pointGroup name="RTDS.Line1">
+      <coordinate x="591" y="85" />
+      <point name="RTDS.Line1.Amps" pointName="RTDS.Line1.Amps" />
+      <point name="RTDS.Line1.kW" pointName="RTDS.Line1.kW" />
+    </pointGroup>
+    <pointGroup name="RTDS.Line2">
+      <coordinate x="601" y="177" />
+      <point name="RTDS.Line2.Amps" pointName="RTDS.Line2.Amps" />
+      <point name="RTDS.Line2.kW" pointName="RTDS.Line2.kW" />
+    </pointGroup>
+    <pointGroup name="RTDS.Line4">
+      <coordinate x="545" y="275" />
+      <point name="RTDS.Line4.Amps" pointName="RTDS.Line4.Amps" />
+      <point name="RTDS.Line4.kW" pointName="RTDS.Line4.kW" />
+    </pointGroup>
+    <pointGroup name="RTDS.Line3">
+      <coordinate x="526" y="131" />
+      <point name="RTDS.Line3.Amps" pointName="RTDS.Line3.Amps" />
+      <point name="RTDS.Line3.kW" pointName="RTDS.Line3.kW" />
+    </pointGroup>
+  </pointGroups>
+  <navigationDestinations>
+    <!--<destination name="schematic-mainstreet" uri="ModelNodeDetailPlace:?model_node_name=RTDS;tab=schematic" xmlns="http://www.totalgrid.org/schematic" />-->
+    <!--<destination name="schematic-residential" uri="ModelNodeDetailPlace:?model_node_name=Residential;tab=schematic" xmlns="http://www.totalgrid.org/schematic" />-->
+    <!--<destination name="dashboard" uri="DashboardPlace:" xmlns="http://www.totalgrid.org/schematic" />-->
+  </navigationDestinations>
+  <navigationAreas></navigationAreas>
+  <labels>
+    <!--<label xsi:type="NavigationLabel" name="schematic:mainStreet" label="To Main Street" destination="schematic-mainstreet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.totalgrid.org/schematic"><coordinate x="5" y="5" /></label>-->
+    <!--<label xsi:type="NavigationLabel" name="schematic:residential" label="To Residential" destination="schematic-residential" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.totalgrid.org/schematic"><coordinate x="5" y="50" /></label>-->
+    <!--<label xsi:type="NavigationLabel" name="dashboard" label="To Dashboard" destination="dashboard" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.totalgrid.org/schematic"><coordinate x="5" y="100" /></label>-->
+
+    <label xsi:type="Label" name="DES3" label="DES3" >
+      <coordinate x="166" y="395" />
+     </label>     
+    <label xsi:type="Label" name="DES2" label="DES2" >
+      <coordinate x="967" y="395" />
+     </label>     
+    <label xsi:type="Label" name="DES1" label="DES1" >
+      <coordinate x="997" y="218" />
+     </label>     
+
+</labels>
+  <rects></rects>
+</schematic>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schematic xmlns="http://www.totalgrid.org/schematic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schematic.xsd">
+  <!--MV schematic-->
+  <voltages>
+    <nominalVoltage value="22kV" color="#ef2929" />
+    <nominalVoltage value="7.2kV" color="#fce94f" isDefault="true" />
+    <nominalVoltage value="277V" color="aqua" />
+    <nominalVoltage value="240V" color="#729fcf" />
+    <nominalVoltage value="208V" color="deeppink" />
+    <nominalVoltage value="120V" color="purple" />
+  </voltages>
+  <equipment>
+    <equipment xsi:type="NullEquipment" name="RSpace">
+      <coordinate x="1150" y="350" />
+    </equipment>
+    <equipment xsi:type="Transformer" name="MV.T3" label="T3"  westNominalVoltage="277V" eastNominalVoltage="7.2kV">
+      <coordinate x="262.5" y="173" />
+    </equipment>
+    <equipment xsi:type="Extension" name="MV.CB" label="CB MV" symbolFileName="cbnonstate">
+      <coordinate x="412.5" y="170" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="MV.Bus1" label="MV BUS" nominalVoltage="7.2kV" length="150">
+      <coordinate x="537.5" y="95" />
+    </equipment>
+    <equipment xsi:type="Extension" name="MV.SW1" label="SW1" symbolFileName="switchnonstate">
+      <coordinate x="662.5" y="115.3" />
+    </equipment>
+    <equipment xsi:type="Extension" name="MV.SW2" label="SW2" symbolFileName="switchnonstate">
+      <coordinate x="662.5" y="215.3" />
+    </equipment>
+    <equipment xsi:type="TerminationCabinetType1" name="MV.TCE" label="TCE">
+      <coordinate x="787.5" y="120" />
+    </equipment>
+    <equipment xsi:type="TerminationCabinetType1" name="MV.TCD" label="TCD">
+      <coordinate x="912.5" y="120" />
+    </equipment>
+    <equipment xsi:type="TerminationCabinetType1" name="MV.TCC" label="TCC">
+      <coordinate x="1037.5" y="120" />
+    </equipment>
+    <equipment xsi:type="TerminationCabinetType1" name="MV.TCA" label="TCA">
+      <coordinate x="850" y="220" />
+    </equipment>
+    <equipment xsi:type="TerminationCabinetType1" name="MV.TCB" label="TCB">
+      <coordinate x="975" y="220" />
+    </equipment>
+    <equipment xsi:type="DestinationArrow" name="ToLVArrow" label="" rotate="180">
+      <coordinate x="200" y="173" />
+    </equipment>
+   </equipment>
+  <connections>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.T3" orientation="EAST" />
+      <endTerminal equipmentName="MV.CB" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.CB" orientation="EAST" />
+      <endTerminal equipmentName="MV.Bus1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.SW1" orientation="WEST" />
+      <endTerminal equipmentName="MV.Bus1" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.SW2" orientation="WEST" />
+      <endTerminal equipmentName="MV.Bus1" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.SW1" orientation="EAST" />
+      <endTerminal equipmentName="MV.TCE" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.SW2" orientation="EAST" />
+      <endTerminal equipmentName="MV.TCA" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.TCE" orientation="EAST" />
+      <endTerminal equipmentName="MV.TCD" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.TCD" orientation="EAST" />
+      <endTerminal equipmentName="MV.TCC" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.TCA" orientation="EAST" />
+      <endTerminal equipmentName="MV.TCB" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="7.2kV">
+      <startTerminal equipmentName="MV.TCC" orientation="EAST" />
+      <endTerminal equipmentName="MV.TCB" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MV.T3" orientation="WEST" />
+      <endTerminal equipmentName="ToLVArrow" orientation="EAST" />
+    </connection>
+    </connections>
+  <pointGroups>
+    <pointGroup name="MV.Line.MWh">
+      <coordinate x="299.5" y="115" />
+      <point name="MV.Line.kWh" pointName="MV.Line.MWh" />
+      <point name="MV.Line.kVar_tot" pointName="MV.Line.kVar_tot" />
+      <point name="MV.Line.kW_tot" pointName="MV.Line.kW_tot" />
+    </pointGroup>
+    <pointGroup name="MV.Line.Frequency">
+      <coordinate x="459.5" y="220" />
+      <point name="MV.Line.Frequency" pointName="MV.Line.Frequency" />
+      <point name="MV.Line.kV_a" pointName="MV.Line.kV_a" />
+    </pointGroup>
+    <pointGroup name="MV.TCE.kWh">
+      <coordinate x="745.5" y="27" />
+      <point name="MV.TCE.kWh" pointName="MV.TCE.kWh" />
+      <point name="MV.TCE.kVar_tot" pointName="MV.TCE.kVar_tot" />
+      <point name="MV.TCE.kW_tot" pointName="MV.TCE.kW_tot" />
+    </pointGroup>
+    <pointGroup name="MV.TCD.kWh">
+      <coordinate x="872.5" y="27" />
+      <point name="MV.TCD.kWh" pointName="MV.TCD.kWh" />
+      <point name="MV.TCD.kVar_tot" pointName="MV.TCD.kVar_tot" />
+      <point name="MV.TCD.kW_tot" pointName="MV.TCD.kW_tot" />
+    </pointGroup>
+    <pointGroup name="MV.TCC.kWh">
+      <coordinate x="997.5" y="27" />
+      <point name="MV.TCC.kWh" pointName="MV.TCC.kWh" />
+      <point name="MV.TCC.kVar_tot" pointName="MV.TCC.kVar_tot" />
+      <point name="MV.TCC.kW_tot" pointName="MV.TCC.kW_tot" />
+    </pointGroup>
+    <pointGroup name="MV.TCB.kWh">
+      <coordinate x="935" y="267" />
+      <point name="MV.TCB.kWh" pointName="MV.TCB.kWh" />
+      <point name="MV.TCB.kVar_tot" pointName="MV.TCB.kVar_tot" />
+      <point name="MV.TCB.kW_tot" pointName="MV.TCB.kW_tot" />
+    </pointGroup>
+    <pointGroup name="MV.TCA.kWh">
+      <coordinate x="810" y="267" />
+      <point name="MV.TCA.kWh" pointName="MV.TCA.kWh" />
+      <point name="MV.TCA.kVar_tot" pointName="MV.TCA.kVar_tot" />
+      <point name="MV.TCA.kW_tot" pointName="MV.TCA.kW_tot" />
+    </pointGroup>
+  </pointGroups>
+  <navigationDestinations>
+    <destination name="schematic-lv" uri="ModelNodeDetailPlace:?model_node_name=LV;tab=schematic" />
+  </navigationDestinations>
+  <navigationAreas></navigationAreas>
+  <labels>
+    <label xsi:type="NavigationLabel" name="schematic:lv" label="GreenHub LV" destination="schematic-lv">
+      <coordinate x="100" y="173" />
+    </label>
+  </labels>
+  <rects></rects>
+</schematic>

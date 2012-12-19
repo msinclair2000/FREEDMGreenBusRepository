@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schematic xmlns="http://www.totalgrid.org/schematic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schematic.xsd">
+  <!-- Residential schematic -->
+  <voltages>
+    <nominalVoltage value="22kV" color="#ef2929" />
+    <nominalVoltage value="7.2kV" color="#fce94f" isDefault="true" />
+    <nominalVoltage value="277V" color="aqua" />
+    <nominalVoltage value="240V" color="#729fcf" />
+    <nominalVoltage value="208V" color="deeppink" />
+    <nominalVoltage value="120V" color="purple" />
+  </voltages>
+  <equipment>
+    <equipment xsi:type="NullEquipment" name="RSpace">
+      <coordinate x="850" y="200" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_LA" label="CB LA" symbolFileName="cbnonstate">
+      <coordinate x="367" y="197" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="RP1" label="RP1" nominalVoltage="208V" length="320">
+      <coordinate x="429.5" y="40" />
+    </equipment>
+    <equipment xsi:type="Extension" name="Residential.CB_PV_R" label="CB PVR" symbolFileName="cbnonstate">
+      <coordinate x="492" y="77" />
+    </equipment>
+    <equipment xsi:type="Extension" name="Residential.CB_EVCS_R" label="CB EV" symbolFileName="cbnonstate">
+      <coordinate x="492" y="157" />
+    </equipment>
+    <equipment xsi:type="Extension" name="Residential.CB_ESS_R" label="CB ESS" symbolFileName="cbnonstate">
+      <coordinate x="492" y="237" />
+    </equipment>
+    <equipment xsi:type="Generator" name="PV_R" type="PHOTOVOLTAIC" label="Rooftop Photovoltaic" rating="5 kW">
+      <coordinate x="687" y="80" />
+    </equipment>
+    <equipment xsi:type="Generator" name="EVCS_R" type="ELECTRIC_VEHICLE" label="EV Charging Station" rating="5 kW">
+      <coordinate x="687" y="160" />
+    </equipment>
+    <equipment xsi:type="Generator" name="ESS_R" type="ENERGY_STORAGE" label="Energy Storage System" rating="20 kWH">
+      <coordinate x="687" y="240" />
+    </equipment>
+    <equipment xsi:type="DestinationArrow" name="ToGreenHubArrow" label="" rotate="180">
+      <coordinate x="210" y="200" />
+    </equipment>
+  </equipment>
+  <connections>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="ToGreenHubArrow" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_LA" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LV.CB_LA" orientation="EAST" />
+      <endTerminal equipmentName="RP1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="RP1" orientation="EAST" />
+      <endTerminal equipmentName="Residential.CB_PV_R" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="RP1" orientation="EAST" />
+      <endTerminal equipmentName="Residential.CB_EVCS_R" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="RP1" orientation="EAST" />
+      <endTerminal equipmentName="Residential.CB_ESS_R" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="Residential.CB_PV_R" orientation="EAST" />
+      <endTerminal equipmentName="PV_R" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="Residential.CB_EVCS_R" orientation="EAST" />
+      <endTerminal equipmentName="EVCS_R" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="Residential.CB_ESS_R" orientation="EAST" />
+      <endTerminal equipmentName="ESS_R" orientation="WEST" />
+    </connection>
+    </connections>
+  <pointGroups>
+    <pointGroup name="Residential.PV_R.kW_tot">
+      <coordinate x="530" y="22" />
+      <point name="Residential.PV_R.kW_tot" pointName="Residential.PV_R.kW_tot" />
+      <point name="Residential.PV_R.kVar_tot" pointName="Residential.PV_R.kVar_tot" />
+      <point name="Residential.PV_R.kWh_tot" pointName="Residential.PV_R.kWh" />
+    </pointGroup>
+    <pointGroup name="Residential.EVCS_Eaton.Igf">
+      <coordinate x="530" y="102" />
+      <point name="Residential.EVCS_Eaton.Igf" pointName="Residential.EVCS_Eaton.Igf" />
+      <point name="Residential.EVCS_Eaton.Ic" pointName="Residential.EVCS_Eaton.Ic" />
+      <point name="Residential.EVCS_Eaton.EVSE_State" pointName="Residential.EVCS_Eaton.EVSE_State" />
+    </pointGroup>
+    <pointGroup name="FREEDM_Microgrid.ESS_R.Inverter_Watts">
+      <coordinate x="530" y="182" />
+      <point name="FREEDM_Microgrid.ESS_R.Inverter_Watts" pointName="FREEDM_Microgrid.ESS_R.Inverter_Watts" />
+      <point name="FREEDM_Microgrid.ESS_R.Charger_Watts" pointName="FREEDM_Microgrid.ESS_R.Charger_Watts" />
+      <point name="FREEDM_Microgrid.ESS_R.%SOC" pointName="FREEDM_Microgrid.ESS_R.%SOC" />
+    </pointGroup>
+  </pointGroups>
+  <navigationDestinations>
+    <destination name="schematic-lv" uri="ModelNodeDetailPlace:?model_node_name=LV;tab=schematic" />
+    <destination name="schematic-residential" uri="ModelNodeDetailPlace:?model_node_name=Residential;tab=schematic" />
+    <destination name="dashboard" uri="DashboardPlace:" />
+  </navigationDestinations>
+  <navigationAreas></navigationAreas>
+  <labels>
+    <label xsi:type="NavigationLabel" name="schematic:LV" label="GreenHub LV" destination="schematic-lv">
+      <coordinate x="110" y="200" />
+    </label>
+  </labels>
+  <rects></rects>
+</schematic>

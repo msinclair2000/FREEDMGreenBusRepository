@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Master xmlns="org.totalgrid.reef.protocol.modbus">
+  <Stack Address="5" />
+  <Polls>
+    <!--<Poll TimeoutMs="2000" IntervalMs="1000" Count="0" Start="0" Type="DiscreteInput" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <!--<Poll TimeoutMs="2000" IntervalMs="1000" Count="0" Start="0" Type="CoilStatus" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <!--<Poll TimeoutMs="2000" IntervalMs="5000" Count="0" Start="0" Type="InputRegister" xmlns="org.totalgrid.reef.protocol.modbus" />-->
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="3" Start="740" Type="HoldingRegister" />
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="3" Start="744" Type="HoldingRegister" />
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="4" Start="685" Type="HoldingRegister" />
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="1" Start="689" Type="HoldingRegister" />
+    
+    <Poll TimeoutMs="8000" IntervalMs="5000" Count="1" Start="691" Type="HoldingRegister" />
+  </Polls>
+  <DiscreteInputMap></DiscreteInputMap>
+  <CoilStatusMap></CoilStatusMap>
+  <InputRegisterMap></InputRegisterMap>
+  <HoldingRegisterMap>
+    <ToNumber ReefName="MV.Line.I_a" Type="UInt16" Index="740" Unit="Amps" />
+    <ToNumber ReefName="MV.Line.I_b" Type="UInt16" Index="741" Unit="Amps" />
+    <ToNumber ReefName="MV.Line.I_c" Type="UInt16" Index="742" Unit="Amps" />
+    <ToNumber ReefName="MV.Line.kV_a" Type="UInt16" Index="744" Unit="kV" />
+    <ToNumber ReefName="MV.Line.kV_b" Type="UInt16" Index="745" Unit="kV" />
+    <ToNumber ReefName="MV.Line.kV_c" Type="UInt16" Index="746" Unit="kV" />
+    <ToNumber ReefName="MV.Line.kW_tot" Type="SInt16" Index="685" Unit="kW" />
+    <ToNumber ReefName="MV.Line.kVar_tot" Type="SInt16" Index="686" Unit="kVar" />
+    <ToNumber ReefName="MV.Line.kVA_tot" Type="SInt16" Index="687" Unit="kVA" />
+    <ToNumber ReefName="MV.Line.Frequency" Type="UInt16" Index="689" Unit="raw" />
+    <ToNumber ReefName="MV.Line.MWh" Type="UInt16" Index="691" Unit="raw" />
+  </HoldingRegisterMap>
+</Master>

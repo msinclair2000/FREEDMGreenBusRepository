@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schematic xmlns="http://www.totalgrid.org/schematic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schematic.xsd">
+  <voltages>
+    <nominalVoltage value="22kV" color="#ef2929" />
+    <nominalVoltage value="7.2kV" color="#fce94f" />
+    <nominalVoltage value="277V" color="#fce94f" isDefault="true" />
+    <nominalVoltage value="240V" color="#729fcf" />
+    <nominalVoltage value="208V" color="deeppink" />
+    <nominalVoltage value="120V" color="purple" />
+  </voltages>
+  <equipment>
+    <equipment xsi:type="NullEquipment" name="RSpace">
+      <coordinate x="1450" y="500" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="MDP" label="MDP" nominalVoltage="277V" length="480">
+      <coordinate x="440" y="20" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="LV.CB" pointName="LV.CB.Status" label="CB LV" initialState="CLOSED" action="none">
+      <coordinate x="380" y="120" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_PV" label="CB PV" symbolFileName="cbnonstate">
+      <coordinate x="380" y="377" />
+    </equipment>
+    <equipment xsi:type="Generator" name="Line_PV" type="PHOTOVOLTAIC" rating="40kW" label="Rooftop PV">
+      <coordinate x="210" y="380" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_T2" label="CB T2" symbolFileName="cbnonstate">
+      <coordinate x="500" y="57" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_HA" label="CB HA" symbolFileName="cbnonstate">
+      <coordinate x="560" y="97" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="HA" label="" nominalVoltage="277V">
+      <coordinate x="670" y="100" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_HB" label="CB HB" symbolFileName="cbnonstate">
+      <coordinate x="500" y="137" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="HB" label="" nominalVoltage="277V">
+      <coordinate x="610" y="140" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_HC" label="CB HC" symbolFileName="cbnonstate">
+      <coordinate x="560" y="177" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="HC" label="" nominalVoltage="277V">
+      <coordinate x="670" y="180" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_HD" label="CB HD" symbolFileName="cbnonstate">
+      <coordinate x="500" y="217" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="HD" label="" nominalVoltage="277V">
+      <coordinate x="610" y="220" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_HE" label="CB HE" symbolFileName="cbnonstate">
+      <coordinate x="560" y="257" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="HE" label="" nominalVoltage="277V">
+      <coordinate x="670" y="260" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_HF" label="CB HF" symbolFileName="cbnonstate">
+      <coordinate x="500" y="297" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="HF" label="" nominalVoltage="277V">
+      <coordinate x="610" y="300" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_HL" label="CB HL" symbolFileName="cbnonstate">
+      <coordinate x="560" y="337" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="HL" label="" nominalVoltage="277V">
+      <coordinate x="670" y="340" />
+    </equipment>
+    <equipment xsi:type="GridTiePoint" name="LV.TIE_POINT" nominalVoltage="22kV">
+      <coordinate x="117" y="20" />
+    </equipment>
+    <equipment xsi:type="Transformer" name="T1" label="T1"  westNominalVoltage="22kV" eastNominalVoltage="277V">
+      <coordinate x="217" y="120" />
+    </equipment>
+    <equipment xsi:type="Transformer" name="T2" label="T2" westNominalVoltage="277V" eastNominalVoltage="208V">
+      <coordinate x="720" y="60" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_208" label="CB208" symbolFileName="cbnonstate">
+      <coordinate x="840" y="57" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="LDA" label="LDA" nominalVoltage="208V" length="340">
+      <coordinate x="900" y="20" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_LA" label="CB LA" symbolFileName="cbnonstate">
+      <coordinate x="1020" y="37" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="LA" label="" nominalVoltage="208V">
+      <coordinate x="1130" y="40" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_LB" label="CB LB" symbolFileName="cbnonstate">
+      <coordinate x="960" y="77" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="LB" label="" nominalVoltage="208V">
+      <coordinate x="1070" y="80" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_LC" label="CB LC" symbolFileName="cbnonstate">
+      <coordinate x="1020" y="117" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="LC" label="" nominalVoltage="208V">
+      <coordinate x="1130" y="120" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_LD" label="CB LD" symbolFileName="cbnonstate">
+      <coordinate x="960" y="157" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="LD" label="" nominalVoltage="208V">
+      <coordinate x="1070" y="160" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_LE" label="CB LE" symbolFileName="cbnonstate">
+      <coordinate x="1020" y="197" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="LE" label="" nominalVoltage="208V">
+      <coordinate x="1130" y="200" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_LF" label="CB LF" symbolFileName="cbnonstate">
+      <coordinate x="960" y="237" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="LF" label="" nominalVoltage="208V">
+      <coordinate x="1070" y="240" />
+    </equipment>
+    <equipment xsi:type="Extension" name="LV.CB_CS" label="CB CS" symbolFileName="cbnonstate">
+      <coordinate x="1020" y="277" />
+    </equipment>
+    <equipment xsi:type="TerminalBus" name="CS" label="" nominalVoltage="208V">
+      <coordinate x="1130" y="280" />
+    </equipment>
+    <equipment xsi:type="BusBar" name="HAD" label="HAD" nominalVoltage="277V" length="160">
+      <coordinate x="835" y="380" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="LV.CB_BTB1" pointName="LV.CB_BTB1.Status" label="CB BTB1" initialState="CLOSED" action="none">
+      <coordinate x="500" y="420" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="LV.CB_BTB2" pointName="LV.CB_BTB2.Status" label="CB BTB2" initialState="CLOSED" action="none">
+      <coordinate x="775" y="420" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="LV.CB_BTB3" pointName="LV.CB_BTB3.Status" label="CB BTB3" initialState="CLOSED" action="none">
+      <coordinate x="560" y="460" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="LV.CB_BTB4" pointName="LV.CB_BTB4.Status" label="CB BTB4" initialState="CLOSED" action="none">
+      <coordinate x="715" y="460" />
+    </equipment>
+    <equipment xsi:type="TerminationCabinetType2" name="BTB1" label="">
+      <coordinate x="612.5" y="520" />
+    </equipment>
+    <equipment xsi:type="TerminationCabinetType2" name="BTB2" label="">
+      <coordinate x="662.5" y="520" />
+    </equipment>
+    <equipment xsi:type="DestinationArrow" name="otherResidentialLoads2" label="" rotate="0">
+      <coordinate x="1180" y="40" />
+    </equipment>
+    <equipment xsi:type="CircuitBreaker" name="LV.CB_T3" pointName="LV.CB_T3.Status" label="CB T3" initialState="CLOSED" action="none">
+      <coordinate x="895" y="500" />
+    </equipment>
+    <equipment xsi:type="Transformer" name="T3" label="T3"  westNominalVoltage="277V" eastNominalVoltage="7.2kV">
+      <coordinate x="1015" y="500" />
+    </equipment>
+    <equipment xsi:type="DestinationArrow" name="ToGreenHubMV" label="" rotate="0">
+      <coordinate x="1145" y="500" />
+    </equipment>
+  </equipment>
+  <connections>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="WEST" />
+      <endTerminal equipmentName="LV.CB" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="WEST" />
+      <endTerminal equipmentName="LV.CB_PV" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_PV" orientation="WEST" />
+      <endTerminal equipmentName="Line_PV" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_T2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_HA" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_HA" orientation="EAST" />
+      <endTerminal equipmentName="HA" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_HB" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_HB" orientation="EAST" />
+      <endTerminal equipmentName="HB" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_HC" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_HC" orientation="EAST" />
+      <endTerminal equipmentName="HC" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_HD" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_HD" orientation="EAST" />
+      <endTerminal equipmentName="HD" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_HE" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_HE" orientation="EAST" />
+      <endTerminal equipmentName="HE" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_HF" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_HF" orientation="EAST" />
+      <endTerminal equipmentName="HF" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_HL" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_HL" orientation="EAST" />
+      <endTerminal equipmentName="HL" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB" orientation="WEST" />
+      <endTerminal equipmentName="T1" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="22kV">
+      <startTerminal equipmentName="LV.TIE_POINT" orientation="SOUTH" />
+      <endTerminal equipmentName="T1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_T2" orientation="EAST" />
+      <endTerminal equipmentName="T2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="T2" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_208" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LDA" orientation="WEST" />
+      <endTerminal equipmentName="LV.CB_208" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LDA" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_LA" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LV.CB_LA" orientation="EAST" />
+      <endTerminal equipmentName="LA" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LDA" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_LB" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LV.CB_LB" orientation="EAST" />
+      <endTerminal equipmentName="LB" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LDA" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_LC" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LV.CB_LC" orientation="EAST" />
+      <endTerminal equipmentName="LC" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LDA" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_LD" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LV.CB_LD" orientation="EAST" />
+      <endTerminal equipmentName="LD" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LDA" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_LE" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LV.CB_LE" orientation="EAST" />
+      <endTerminal equipmentName="LE" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LDA" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_LF" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LV.CB_LF" orientation="EAST" />
+      <endTerminal equipmentName="LF" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LDA" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_CS" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LV.CB_CS" orientation="EAST" />
+      <endTerminal equipmentName="CS" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_BTB1" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="HAD" orientation="WEST" />
+      <endTerminal equipmentName="LV.CB_BTB2" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_BTB1" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_BTB2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="MDP" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_BTB3" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="HAD" orientation="WEST" />
+      <endTerminal equipmentName="LV.CB_BTB4" orientation="EAST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_BTB3" orientation="EAST" />
+      <endTerminal equipmentName="BTB1" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_BTB4" orientation="WEST" />
+      <endTerminal equipmentName="BTB2" orientation="NORTH" />
+    </connection>
+    <connection nominalVoltage="208V">
+      <startTerminal equipmentName="LA" orientation="EAST" />
+      <endTerminal equipmentName="otherResidentialLoads2" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="HAD" orientation="EAST" />
+      <endTerminal equipmentName="LV.CB_T3" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="LV.CB_T3" orientation="EAST" />
+      <endTerminal equipmentName="T3" orientation="WEST" />
+    </connection>
+    <connection nominalVoltage="277V">
+      <startTerminal equipmentName="T3" orientation="EAST" />
+      <endTerminal equipmentName="ToGreenHubMV" orientation="WEST" />
+    </connection>
+  </connections>
+  <pointGroups>
+    <pointGroup name="LV.Line.V_a">
+      <coordinate x="362" y="458" />
+      <point name="LV.Line.V_a" pointName="LV.Line.V_a" />
+      <point name="LV.Line.Frequency" pointName="LV.Line.Frequency" />
+    </pointGroup>
+    <pointGroup name="LV.Line_PV.kW_tot">
+      <coordinate x="263" y="322" />
+      <point name="LV.Line_PV.kW_tot" pointName="LV.Line_PV.kW_tot" />
+      <point name="LV.Line_PV.kVar_tot" pointName="LV.Line_PV.kVar_tot" />
+      <point name="LV.Line_PV.kWh" pointName="LV.Line_PV.kWh" />
+    </pointGroup>
+    <pointGroup name="LV.Line.kW_tot">
+      <coordinate x="252" y="62" />
+      <point name="LV.Line.kW_tot" pointName="LV.Line.kW_tot" />
+      <point name="LV.Line.kVar_tot" pointName="LV.Line.kVar_tot" />
+    </pointGroup>
+  </pointGroups>
+  <navigationDestinations>
+    <destination name="schematic-MV" uri="ModelNodeDetailPlace:?model_node_name=MV;tab=schematic" />
+    <destination name="schematic-residential" uri="ModelNodeDetailPlace:?model_node_name=Residential;tab=schematic" />
+    </navigationDestinations>
+
+  <navigationAreas></navigationAreas>
+  <labels>
+    <label xsi:type="NavigationLabel" name="schematic:residential" label="GreenHub Residential" destination="schematic-residential">
+      <coordinate x="1200" y="40" />
+    </label>
+    <label xsi:type="NavigationLabel" name="schematic:MV" label="GreenHub MV" destination="schematic-MV">
+      <coordinate x="1160" y="500" />
+     </label>
+    <label xsi:type="Label" name="BTB1" label="BTB1" font-size="12" >
+      <coordinate x="599" y="550" />
+      </label>
+    <label xsi:type="Label" name="BTB2" label="BTB1" font-size="12" >
+      <coordinate x="649" y="550" />
+     </label>
+    <label xsi:type="Label" name="22kV" label="22kV" font-size="12" >
+      <coordinate x="100" y="10" />
+     </label>   
+    <label xsi:type="Label" name="HA" label="HA" font-size="12" >
+      <coordinate x="675" y="125" />
+     </label>   
+     <label xsi:type="Label" name="HB" label="HB" font-size="12" >
+      <coordinate x="615" y="165" />
+     </label>   
+     <label xsi:type="Label" name="HC" label="HC" font-size="12" >
+      <coordinate x="675" y="205" />
+     </label>   
+     <label xsi:type="Label" name="HD" label="HD" font-size="12" >
+      <coordinate x="615" y="245" />
+     </label>   
+     <label xsi:type="Label" name="HE" label="HE" font-size="12" >
+      <coordinate x="675" y="285" />
+     </label>   
+     <label xsi:type="Label" name="HF" label="HF" font-size="12" >
+      <coordinate x="615" y="325" />
+     </label>   
+     <label xsi:type="Label" name="HL" label="HL" font-size="12" >
+      <coordinate x="675" y="365" />
+     </label>   
+     <label xsi:type="Label" name="LA" label="LA" font-size="12" >
+      <coordinate x="1135" y="65" />
+     </label>   
+     <label xsi:type="Label" name="LB" label="LB" font-size="12" >
+      <coordinate x="1075" y="105" />
+     </label>   
+     <label xsi:type="Label" name="LC" label="LC" font-size="12" >
+      <coordinate x="1135" y="145" />
+     </label>   
+     <label xsi:type="Label" name="LD" label="LD" font-size="12" >
+      <coordinate x="1075" y="185" />
+     </label>   
+
+     <label xsi:type="Label" name="LE" label="LE" font-size="12" >
+      <coordinate x="1135" y="225" />
+     </label>   
+     <label xsi:type="Label" name="LF" label="LF" font-size="12" >
+      <coordinate x="1075" y="265" />
+     </label>   
+
+     <label xsi:type="Label" name="CS" label="CS" font-size="12" >
+      <coordinate x="1135" y="305" />
+     </label>   
+     
+
+  </labels>
+  <rects></rects>
+</schematic>
